@@ -73,27 +73,6 @@ const checkBox = () => {
     document.getElementById("demo").innerHTML = "The required property was set. The checkbox must now be checked before submitting the form.";
   }
 
-// const checkForm = () => {
-//     if (document.getElementById('first_name').value === "") {
-//         alert("Missing First Name");
-//         return false;
-//     } else if (document.getElementById('last_name').value === ""){
-//         alert("Missing Last Name");
-//         return false;
-//     } else if (document.getElementById('user_age').value === ""){
-//         alert("Missing Age");
-//         return false;
-//     } else if (document.getElementById('user_zip').value === ""){
-//         alert("Missing Zip Code");
-//         return false;  
-//     } else if (document.getElementById('email_address').value === ""){
-//         alert("Missing Email Address");
-//         return false;
-//     } else {
-//         return handleSubmit();
-//     }    
-// }
-
 const removeValidationError = () => {
     document.getElementById("first-name").remove();
     document.getElementById("last-name").remove();
