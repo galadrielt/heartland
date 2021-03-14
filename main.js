@@ -99,6 +99,7 @@ const removeValidationError = () => {
     document.getElementById("last-name").remove();
     document.getElementById("user-age").remove();
     document.getElementById("user-zip").remove();
+    document.getElementById("user__zip").remove();
     document.getElementById("user-email").remove();
     document.getElementById("user__email").remove();
     document.getElementById("demo").remove();
