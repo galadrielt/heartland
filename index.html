@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form 
+    method="post"
+    id="form" 
+    action="/action_page.php"
+    onsubmit="validate()"
+    >
+        <div class="form-container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h1>Sign Up</h1>
+                </div>
+                <div class="form-body">
+                    <div class="form-field">
+                     <div class="form-fields">
+                        <label htmlFor="first_name" class="cf-label">
+                            <div class="control">
+                                   <input 
+                                   name="first_name" 
+                                   class="input-name-field"
+                                   autoComplete="off"
+                                   id="first_name"
+                                   type="text"
+                                   required
+                                    >
+                                 <p id="first-name"></p>
+                                 <p class="input-name">First Name</p>
+                           </div>
+                        </label>              
+                        <label htmlFor="last_name">
+                        <div class="control">
+                                   <input 
+                                   name="last_name" 
+                                   class="input-name-field"
+                                   autoComplete="off"
+                                   id="last_name"
+                                   type="text"
+                                   required
+                                   >
+                                 <p id="last-name"></p>  
+                                 <p class="input-name">Last Name</p>
+                           </div>
+                        </label>
+                     </div>  
+                        <div class="form-fields">
+                           <label htmlFor="age" class="cf-label">
+                               <div class="control">
+                                      <input 
+                                      name="user_age" 
+                                      class="input-name-field"
+                                      autoComplete="off"
+                                      id="user_age"
+                                      type="number"
+                                      required
+                                      onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"
+                                       >
+                                    <p id="user-age"></p>  
+                                    <p class="input-name">Age</p>
+                              </div>
+                           </label>                  
+                           <label htmlFor="zip">
+                           <div class="control">
+                                      <input 
+                                      name="user_zip" 
+                                      class="input-name-field"
+                                      autoComplete="off"
+                                      id="user_zip"
+                                      type="number"
+                                      required
+                                      >
+                                    <p id="user-zip"></p> 
+                                    <p id="user__zip"></p>
+                                    <p class="input-name">Zip</p>
+                              </div>
+                           </label>
+                        </div>  
+                        <div class="form-fields">
+                           <label htmlFor="email" class="cf-label">
+                               <div class="control">
+                                      <input 
+                                      name="email-address" 
+                                      class="input-name-field"
+                                      autoComplete="off"
+                                      id="email_address"
+                                      type="email"
+                                      required
+                                       >
+                                    <p id="user-email"></p>  
+                                    <p id="user__email"></p> 
+                                    <p class="input-name">Email</p>
+                              </div>
+                           </label>
+                       </div>
+                    </div>
+                </div>
+               <div class="footer-container">
+                <div class="footer-wrapper">
+                    <div class="taste-buttons">
+                        <div class="control">
+                            <input type="radio" id="salty" name="taste" value="salty">
+                            <label for="salty">Salty</label><br> 
+                        </div>
+                       <div class="control">
+                        <input type="radio" id="sweet" name="taste" value="sweet">
+                        <label for="sweet">Sweet</label><br> 
+                       </div>   
+                    </div>                  
+                   <div class="opt-in">
+                    <input 
+                    required
+                    type="checkbox" 
+                    name="checkbox" 
+                    value="check" 
+                    id="check_box">
+                    <label for="love"> Check if you love this website!</label>
+                    <div>
+                        <p id="demo"></p>
+                    </div>   
+                   </div>
+                    <input 
+                      class="btn" 
+                      type="submit" 
+                      value="Register" 
+                      id="submit-btn"
+                      onclick="if(!this.form.checkbox.checked){checkBox();return false}{validate()}"
+                      >  
+                   </div>
+               </div>
+               <p id="log"></p>
+            </div>
+        </div>
+    </form>
+
+  <script src="main.js"></script>
+</body>
+</html>
